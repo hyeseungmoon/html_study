@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  position: relative;
+  height: 70px;
+  box-shadow: 0 2px 3px lightgrey;
+}
+
+.gnb {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.gnb > ul {
+  overflow: hidden;
+}
+
+.gnb > ul > li {
+  display: block;
+  float: left;
+  margin: 10px;
+}
+
+.gnb > ul > li:first-child:hover {
+  color: darkorchid;
+  cursor: pointer;
+}
+
+.gnb > ul > li:nth-of-type(2) > span {
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.gnb > ul > li:nth-of-type(2) > span:hover {
+  color: darkorchid;
+  cursor: pointer;
+}
+
+.search {
+  position: absolute;
+  overflow: hidden;
+  width: 400px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.search input[type="text"] {
+  display: block;
+  float: left;
+  height: 45px;
+  width: 299px;
+  box-sizing: border-box;
+  background-color: rgb(228, 228, 228);
+  border-radius: 8px 0 0 8px;
+  border: 2px solid white;
+  transition: 0.2s;
+  padding-left: 20px;
+  font-size: 0.9rem;
+}
+
+.search input[type="text"]::placeholder {
+  color: black;
+}
+
+.search input[type="text"]:hover {
+  border: 2px solid lightgrey;
+}
+
+.search input[type="text"]:focus {
+  outline: none;
+  background-color: white;
+  border: 2px solid darkorchid;
+}
+
+.search button {
+  display: block;
+  width: 80px;
+  height: 45px;
+  float: left;
+  border-radius: 0 8px 8px 0;
+  background-color: rgb(245, 245, 245);
+  box-sizing: border-box;
+  border: 2px solid white;
+}
+
+.user_menu {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.user_menu > ul {
+  overflow: hidden;
+}
+
+.user_menu > ul > li {
+  float: left;
+  margin: 10px;
+}
+
+.user_menu > ul > li:nth-of-type(2) > button {
+  background-color: rgb(241, 241, 241);
+}
+
+.user_menu > ul > li:nth-of-type(2) > button:hover {
+  background-color: lightgrey;
+}
+
+.user_menu > ul > li:nth-of-type(3) > button {
+  background-color: darkorchid;
+  color: white;
+}
+
+.user_menu > ul > li:nth-of-type(3) > button:hover {
+  background-color: rgb(135, 35, 179);
+  color: white;
+}
+
+/* button */
+.select_button {
+  height: 30px;
+  border-radius: 3px;
+  padding: 0 10px;
+  border: none;
+  background-color: white;
+  font-size: 0.8rem;
+}
+
+.select_button:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
