@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(251, 251, 251);
+}
+
+li {
+  list-style: none;
+}
+
+/* 네비게이션 바 */
+aside.nav_bar {
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  left: 0;
+  height: 90vh;
+  min-width: 18vw;
+  background: #000;
+  padding: 3vh;
+  box-sizing: border-box;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+aside.nav_bar > .nav_top {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav_top > a {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.nav_top h2 {
+  color: white;
+  font-size: 1rem;
+  padding-right: 5px;
+}
+
+.nav_top h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+.nav_top i {
+  margin-right: 10px;
+  color: rgb(204, 204, 204);
+}
+
+aside.nav_bar > .nav_content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60vh;
+  color: rgb(204, 204, 204);
+}
+
+.nav_content > * {
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid rgb(32, 32, 32);
+}
+
+.nav_content > .login {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-satrt;
+  align-items: center;
+  padding: 5px;
+  height: 8vh;
+}
+
+.login > .profile {
+  border-radius: 45px;
+}
+.login > span {
+  margin-left: 10px;
+}
+
+.nav_content > .category {
+  height: 40vh;
+}
+
+.nav_content > .about {
+  height: 10vh;
+}
+
+aside.nav_bar > .nav_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.nav_bottom > button {
+  background-color: black;
+  width: 200px;
+  height: 60px;
+  color: rgb(204, 204, 204);
+  border: 1px solid rgb(204, 204, 204);
+  font-size: 1rem;
+  border-radius: 9px;
+}
+
+.nav_bottom > button:hover {
+  color: rgb(251, 251, 251);
+  border-color: rgb(251, 251, 251);
+  cursor: pointer;
+}
+
+/* 뮤직 플레이어 */
+div.music_player {
+  position: fixed;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  height: 10vh;
+  width: 100vw;
+  bottom: 0;
+  background: #323232;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.music_player > .player {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100vw - 10vh);
+}
+
+.music_info {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 15px;
+  color: white;
+}
+
+.music_info > .title_singer_wrapper {
+  display: flex;
+  padding-left: 15px;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.music_info > .title_singer_wrapper > span {
+  font-size: 0.7rem;
+  color: rgb(204, 204, 204);
+  padding-top: 5px;
+}
+
+.player_function {
+  width: 12vw;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: white;
+}
+
+.player_function > i:nth-of-type(2) {
+  color: rgb(255, 0, 98);
+}
+
+.player_function > i:nth-of-type(n):hover {
+  cursor: pointer;
+}
+
+.volume {
+  color: rgb(204, 204, 204);
+}
+
+.music_player > .music_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vh;
+  color: rgb(204, 204, 204);
+}
+
+/* 콘텐츠 */
+.contents {
+  padding-left: 24vw;
+  width: 72vw;
+  height: 200vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#contents_title {
+  display: flex;
+  align-items: center;
+  margin-top: 6vh;
+  margin-bottom: 1vh;
+  width: 100%;
+  height: 10vh;
+}
+
+#contents_title h1 {
+  line-height: 100%;
+  vertical-align: center;
+  font-size: 1.8rem;
+}
+
+#contents_category > ul {
+  display: flex;
+  width: 30vw;
+  vertical-align: center;
+  justify-content: space-between;
+}
+
+#contents_category > ul > li > button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(204, 204, 204);
+  height: 35px;
+  padding: 0 25px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: rgb(204, 204, 204);
+  font-weight: bold;
+}
+
+#contents_category > ul > li:first-child button {
+  background-color: rgb(255, 0, 98);
+  border: none;
+  color: white;
+}
+
+#contents_category > ul > li > button:hover {
+  cursor: pointer;
+}
+
+#main_contents {
+  background-color: white;
+  width: 100%;
+  margin-top: 3vh;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-items: flex-start;
+}
+
+#main_contents_p {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-left: 3vw;
+}
+
+#main_contents_p > h1 {
+  font-size: 2rem;
+}
+
+#main_contents_p > h3 {
+  height: 2.2rem;
+  margin-top: 2vh;
+  font-size: 1rem;
+  width: 40vw;
+  color: rgb(204, 204, 204);
+}
+
+.ellipsis {
+  white-space: normal;
+  -webkit-line-clamp: 2; /* 라인수 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#main_contents_p > h4 {
+  height: 2.2rem;
+  margin-top: 2vh;
+  font-size: 1rem;
+  color: rgb(204, 204, 204);
+  font-weight: 200;
+}
+
+.sub_contents_row {
+  display: flex;
+  flex-flow: row;
+  margin-top: 5vh;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 33vh;
+}
+
+.music_place_holder {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 23vw;
+  height: 100%;
+  background: white;
+}
